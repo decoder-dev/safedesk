@@ -1,4 +1,4 @@
-use super::HbbHttpResponse;
+﻿use super::HbbHttpResponse;
 use crate::hbbs_http::create_http_client_with_url;
 use hbb_common::{config::LocalConfig, log, ResultType};
 use serde_derive::{Deserialize, Serialize};
@@ -37,7 +37,7 @@ pub struct DeviceInfo {
     #[serde(default)]
     pub r#type: String,
 
-    /// device name from rustdesk client,
+    /// device name from safedesk client,
     /// browser info(name + version) from browser
     #[serde(default)]
     pub name: String,

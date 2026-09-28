@@ -1,4 +1,4 @@
-use super::{
+﻿use super::{
     server::{Ripple, EVENT_PROXY},
     win_linux::{create_font_face, draw_text},
     Cursor, CustomEvent,
@@ -26,7 +26,7 @@ pub(super) fn create_event_loop() -> ResultType<()> {
 
     let event_loop = EventLoopBuilder::<(String, CustomEvent)>::with_user_event().build();
     let mut window_builder = WindowBuilder::new()
-        .with_title("RustDesk whiteboard")
+        .with_title("SafeDesk whiteboard")
         .with_transparent(true)
         .with_always_on_top(true)
         .with_skip_taskbar(true)

@@ -1,4 +1,4 @@
-// CustomAction.cpp : Defines the entry point for the custom action.
+﻿// CustomAction.cpp : Defines the entry point for the custom action.
 #include "pch.h"
 #include <stdlib.h>
 #include <strutil.h>
@@ -206,7 +206,7 @@ UINT __stdcall RemoveRuntimeGeneratedFiles(
     }
 
     WcaLog(LOGMSG_STANDARD, "Removing runtime-generated files from install folder: %ls", installFolder);
-    DeleteRuntimeGeneratedFile(installFolder, L"RuntimeBroker_rustdesk.exe");
+    DeleteRuntimeGeneratedFile(installFolder, L"RuntimeBroker_safedesk.exe");
 
 LExit:
     ReleaseStr(pwzData);

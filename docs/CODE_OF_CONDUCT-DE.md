@@ -1,4 +1,4 @@
-
+﻿
 # Verhaltenskodex (Code of Conduct) für Mitwirkende
 
 ## Unsere Verpflichtung
@@ -64,7 +64,7 @@ Vertreter bei einer Online- oder Präsenzveranstaltung.
 
 Fälle von missbräuchlichem, belästigendem oder anderweitig inakzeptablem Verhalten können
 den für die Durchsetzung zuständigen Community-Leitern 
-unter [info@rustdesk.com](mailto:info@rustdesk.com) gemeldet werden.
+unter [info@safedesk.com](mailto:info@safedesk.com) gemeldet werden.
 Jeder Fall wird umgehend und fair geprüft und untersucht.
 
 ## Richtlinien zur Geltendmachung 

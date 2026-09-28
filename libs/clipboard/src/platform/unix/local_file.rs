@@ -1,4 +1,4 @@
-use super::{
+﻿use super::{
     filetype::validate_file_name, BLOCK_SIZE, FILE_NAME_CODE_UNITS, FILE_NAME_FIELD_SIZE,
     LDAP_EPOCH_DELTA,
 };
@@ -469,7 +469,7 @@ mod file_list_test {
     #[test]
     fn read_exact_at_reopens_after_read_failure() -> Result<(), Box<dyn std::error::Error>> {
         let file_path = std::env::temp_dir().join(format!(
-            "rustdesk-clipboard-local-file-{}",
+            "safedesk-clipboard-local-file-{}",
             std::process::id()
         ));
         std::fs::write(&file_path, b"")?;

@@ -1,4 +1,4 @@
-use std::{
+﻿use std::{
     collections::HashMap,
     net::SocketAddr,
     sync::{Arc, Mutex, RwLock, Weak},
@@ -934,7 +934,7 @@ pub async fn stop_main_window_process() {
     #[cfg(windows)]
     {
         // in case above failure, e.g. zombie process
-        if let Err(e) = crate::platform::try_kill_rustdesk_main_window_process() {
+        if let Err(e) = crate::platform::try_kill_safedesk_main_window_process() {
             log::error!("kill failed: {}", e);
         }
     }

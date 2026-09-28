@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 	<?include ../Includes.wxi?>
 
@@ -16,11 +16,11 @@
 		in Control Panel's Add/Remove Programs https://learn.microsoft.com/en-us/windows/win32/msi/property-reference
 		-->
 		<!--<Property Id="ARPCOMMENTS" Value="!(loc.AR_Comment)" />
-		<Property Id="ARPCONTACT" Value="https://github.com/rustdesk/rustdesk" />
-		<Property Id="ARPHELPLINK" Value="https://github.com/rustdesk/rustdesk" />
-		<Property Id="ARPREADME" Value="https://github.com/rustdesk/rustdesk" />
-		<Property Id="ARPURLINFOABOUT" Value="https://github.com/rustdesk/rustdesk" />
-		<Property Id="ARPURLUPDATEINFO" Value="https://github.com/rustdesk/rustdesk" />-->
+		<Property Id="ARPCONTACT" Value="https://github.com/safedesk/safedesk" />
+		<Property Id="ARPHELPLINK" Value="https://github.com/safedesk/safedesk" />
+		<Property Id="ARPREADME" Value="https://github.com/safedesk/safedesk" />
+		<Property Id="ARPURLINFOABOUT" Value="https://github.com/safedesk/safedesk" />
+		<Property Id="ARPURLUPDATEINFO" Value="https://github.com/safedesk/safedesk" />-->
 
 		<Property Id="ARPPRODUCTICON" Value="AppIcon" />
 

@@ -1,4 +1,4 @@
-// https://learn.microsoft.com/en-us/windows/win32/secgloss/security-glossary
+﻿// https://learn.microsoft.com/en-us/windows/win32/secgloss/security-glossary
 
 use super::{read_token_user_buffer, wide_string, ResultType};
 use hbb_common::{anyhow::anyhow, bail};
@@ -541,7 +541,7 @@ mod tests {
 
     fn unique_acl_test_path(prefix: &str) -> PathBuf {
         std::env::temp_dir().join(format!(
-            "rustdesk_acl_{}_{}_{}",
+            "safedesk_acl_{}_{}_{}",
             prefix,
             std::process::id(),
             hbb_common::rand::random::<u32>()

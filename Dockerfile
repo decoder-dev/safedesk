@@ -1,4 +1,4 @@
-FROM debian:trixie-slim
+﻿FROM debian:trixie-slim
 
 WORKDIR /
 ARG DEBIAN_FRONTEND=noninteractive
@@ -45,7 +45,7 @@ RUN git clone --branch 2023.04.15 --depth=1 https://github.com/microsoft/vcpkg &
 
 RUN groupadd -r user && \
     useradd -r -g user user --home /home/user && \
-    mkdir -p /home/user/rustdesk && \
+    mkdir -p /home/user/safedesk && \
     chown -R user: /home/user && \
     echo "user ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/user
 

@@ -1,4 +1,4 @@
-#[cfg(target_os = "linux")]
+﻿#[cfg(target_os = "linux")]
 pub mod linux;
 
 #[cfg(target_os = "macos")]
@@ -55,7 +55,7 @@ extern "C" fn breakdown_signal_handler(sig: i32) {
     if !info.is_empty() {
         #[cfg(target_os = "linux")]
         linux::system_message(
-            "RustDesk",
+            "SafeDesk",
             &format!("Got signal {} and exit.{}", sig, info),
             true,
         )

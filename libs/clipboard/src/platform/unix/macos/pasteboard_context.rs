@@ -1,4 +1,4 @@
-use super::{
+﻿use super::{
     item_data_provider::create_pasteboard_file_url_provider,
     paste_observer::PasteObserver,
     paste_task::{FileContentsResponse, PasteTask},
@@ -28,7 +28,7 @@ lazy_static::lazy_static! {
     static ref PASTE_OBSERVER_INFO: Arc<Mutex<Option<PasteObserverInfo>>> = Default::default();
 }
 
-pub const TEMP_FILE_PREFIX: &str = ".rustdesk_";
+pub const TEMP_FILE_PREFIX: &str = ".safedesk_";
 
 #[derive(Default, Debug, Clone, PartialEq)]
 pub(super) struct PasteObserverInfo {

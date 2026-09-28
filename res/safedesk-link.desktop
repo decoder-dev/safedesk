@@ -1,0 +1,11 @@
+﻿[Desktop Entry]
+Name=SafeDesk
+NoDisplay=true
+MimeType=x-scheme-handler/safedesk;
+TryExec=safedesk
+Exec=safedesk %u
+Icon=safedesk
+Terminal=false
+Type=Application
+StartupNotify=false
+StartupWMClass=safedesk

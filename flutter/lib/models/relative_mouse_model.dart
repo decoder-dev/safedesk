@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'dart:convert';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
@@ -61,7 +61,7 @@ class RelativeMouseModel {
     if (_hostChannelInitialized) return;
     _hostChannelInitialized = true;
 
-    _hostChannel = const MethodChannel('org.rustdesk.rustdesk/host');
+    _hostChannel = const MethodChannel('org.safedesk.safedesk/host');
     _hostChannel!.setMethodCallHandler((call) async {
       if (call.method == 'onMouseDelta') {
         final args = call.arguments as Map<dynamic, dynamic>;

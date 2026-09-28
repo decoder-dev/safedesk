@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+﻿use std::collections::HashMap;
 use std::error::Error;
 use std::os::unix::io::AsRawFd;
 use std::process::Command;
@@ -167,7 +167,7 @@ impl PipeWireCapturable {
         stream: &PwStreamInfo,
     ) -> Self {
         // alternative to get screen resolution as stream.size is not always correct ex: on fractional scaling
-        // https://github.com/rustdesk/rustdesk/issues/6116#issuecomment-1817724244
+        // https://github.com/safedesk/safedesk/issues/6116#issuecomment-1817724244
         let physical_size = get_res(Self {
             dbus_conn: conn.clone(),
             fd: fd.clone(),

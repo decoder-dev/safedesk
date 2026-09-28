@@ -1,4 +1,4 @@
-use std::{ffi::c_void, rc::Rc};
+﻿use std::{ffi::c_void, rc::Rc};
 
 #[cfg(target_os = "macos")]
 use cocoa::{
@@ -209,7 +209,7 @@ fn service_should_handle_reopen(
     _sender: id,
     _has_visible_windows: BOOL,
 ) -> BOOL {
-    log::debug!("Invoking the main rustdesk process");
+    log::debug!("Invoking the main safedesk process");
     std::thread::spawn(move || crate::handle_url_scheme("".to_string()));
     // Prevent default logic.
     NO

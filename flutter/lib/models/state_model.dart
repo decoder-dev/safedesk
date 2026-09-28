@@ -1,4 +1,4 @@
-import 'package:desktop_multi_window/desktop_multi_window.dart';
+﻿import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter_hbb/common.dart';
 import 'package:get/get.dart';
 
@@ -109,7 +109,7 @@ class StateGlobal {
       final wc = WindowController.fromWindowId(windowId);
       wc.setFullscreen(_fullscreen.isTrue).then((_) {
         // We remove the redraw (width + 1, height + 1), because this issue cannot be reproduced.
-        // https://github.com/rustdesk/rustdesk/issues/9675
+        // https://github.com/safedesk/safedesk/issues/9675
       });
     }
   }

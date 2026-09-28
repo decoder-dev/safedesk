@@ -1,20 +1,20 @@
-#include <dlfcn.h>
+﻿#include <dlfcn.h>
 #include <limits.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include "my_application.h"
 
-#define RUSTDESK_LIB_PATH "librustdesk.so"
-typedef bool (*RustDeskCoreMain)();
+#define SAFEDESK_LIB_PATH "libsafedesk.so"
+typedef bool (*SafeDeskCoreMain)();
 bool gIsConnectionManager = false;
 
 void print_help_install_pkg(const char* so);
 
-// The bundle keeps the core library at lib/librustdesk.so next to the
+// The bundle keeps the core library at lib/libsafedesk.so next to the
 // executable. Resolve that path explicitly instead of relying on the
 // runner's RPATH, which repackaged installs may strip.
-// https://github.com/rustdesk/rustdesk/discussions/14407
+// https://github.com/safedesk/safedesk/discussions/14407
 static void* dlopen_bundled_lib() {
   char exe_path[PATH_MAX];
   ssize_t len = readlink("/proc/self/exe", exe_path, sizeof(exe_path) - 1);
@@ -23,26 +23,26 @@ static void* dlopen_bundled_lib() {
   char* last_slash = strrchr(exe_path, '/');
   if (last_slash == nullptr) return nullptr;
   *last_slash = '\0';
-  char lib_path[PATH_MAX + sizeof("/lib/" RUSTDESK_LIB_PATH)];
-  snprintf(lib_path, sizeof(lib_path), "%s/lib/%s", exe_path, RUSTDESK_LIB_PATH);
+  char lib_path[PATH_MAX + sizeof("/lib/" SAFEDESK_LIB_PATH)];
+  snprintf(lib_path, sizeof(lib_path), "%s/lib/%s", exe_path, SAFEDESK_LIB_PATH);
   if (access(lib_path, F_OK) != 0) return nullptr;
-  void* librustdesk = dlopen(lib_path, RTLD_LAZY);
-  if (!librustdesk) {
+  void* libsafedesk = dlopen(lib_path, RTLD_LAZY);
+  if (!libsafedesk) {
     char* error = dlerror();
     if (error != nullptr) {
       fprintf(stderr, "Failed to load \"%s\": %s\n", lib_path, error);
     }
   }
-  return librustdesk;
+  return libsafedesk;
 }
 
-bool flutter_rustdesk_core_main() {
-   void* librustdesk = dlopen_bundled_lib();
-   if (!librustdesk) {
-      librustdesk = dlopen(RUSTDESK_LIB_PATH, RTLD_LAZY);
+bool flutter_safedesk_core_main() {
+   void* libsafedesk = dlopen_bundled_lib();
+   if (!libsafedesk) {
+      libsafedesk = dlopen(SAFEDESK_LIB_PATH, RTLD_LAZY);
    }
-   if (!librustdesk) {
-      fprintf(stderr,"Failed to load \"librustdesk.so\"\n");
+   if (!libsafedesk) {
+      fprintf(stderr,"Failed to load \"libsafedesk.so\"\n");
       char* error;
       if ((error = dlerror()) != nullptr) {
         fprintf(stderr, "%s\n", error);
@@ -56,17 +56,17 @@ bool flutter_rustdesk_core_main() {
       }
      return false;
    }
-   auto core_main = (RustDeskCoreMain) dlsym(librustdesk,"rustdesk_core_main");
+   auto core_main = (SafeDeskCoreMain) dlsym(libsafedesk,"safedesk_core_main");
    char* error;
    if ((error = dlerror()) != nullptr) {
-       fprintf(stderr, "Program entry \"rustdesk_core_main\" is not found: %s\n", error);
+       fprintf(stderr, "Program entry \"safedesk_core_main\" is not found: %s\n", error);
        return false;
    }
    return core_main();
 }
 
 int main(int argc, char** argv) {
-  if (!flutter_rustdesk_core_main()) {
+  if (!flutter_safedesk_core_main()) {
       return 0;
   }
   for (int i = 0; i < argc; i++) {

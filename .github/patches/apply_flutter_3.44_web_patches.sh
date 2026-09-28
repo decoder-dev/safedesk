@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 # Prepares a web build on Flutter 3.44.x. Companion to
 # apply_flutter_3.44_source_patches.sh (which it runs first): the web target
 # additionally needs qr_code_scanner's web implementation patched for the
 # dart:ui platformViewRegistry removal, and flutter/web/fonts refreshed with
 # the font paths the 3.44 engine requests for offline/air-gapped support
-# (rustdesk-server-pro#996; see flutter/web/fonts/sync_fonts.py).
+# (safedesk-server-pro#996; see flutter/web/fonts/sync_fonts.py).
 #
 # Run from the repository root with Flutter 3.44.x on PATH, then build:
 #   bash .github/patches/apply_flutter_3.44_web_patches.sh

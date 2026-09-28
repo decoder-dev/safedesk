@@ -1,4 +1,4 @@
-use hbb_common::{
+﻿use hbb_common::{
     async_recursion::async_recursion,
     bail,
     config::{Config, Socks5Server},
@@ -14,7 +14,7 @@ use reqwest::{blocking::Client as SyncClient, Client as AsyncClient};
 
 macro_rules! configure_http_client {
     ($builder:expr, $tls_type:expr, $danger_accept_invalid_cert:expr, $Client: ty) => {{
-        // https://github.com/rustdesk/rustdesk/issues/11569
+        // https://github.com/safedesk/safedesk/issues/11569
         // https://docs.rs/reqwest/latest/reqwest/struct.ClientBuilder.html#method.no_proxy
         let mut builder = $builder.no_proxy();
 

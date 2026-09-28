@@ -1,4 +1,4 @@
-# virtual display
+﻿# virtual display
 
 Virtual display may be used on computers that do not have a monitor.
 
@@ -10,7 +10,7 @@ Virtual display may be used on computers that do not have a monitor.
 
 Win10 provides [Indirect Display Driver Model](https://msdn.microsoft.com/en-us/library/windows/hardware/mt761968(v=vs.85).aspx).
 
-This lib uses [this project](https://github.com/rustdesk-org/RustDeskIddDriver) as the driver.
+This lib uses [this project](https://github.com/safedesk-org/SafeDeskIddDriver) as the driver.
 
 
 **NOTE**: Versions before Win10 1607. Try follow [this method](https://github.com/fanxiushu/xdisp_virt/tree/master/indirect_display).

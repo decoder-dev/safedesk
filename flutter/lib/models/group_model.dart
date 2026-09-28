@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+﻿import 'package:flutter/widgets.dart';
 import 'package:flutter_hbb/common.dart';
 import 'package:flutter_hbb/common/hbbs/hbbs.dart';
 import 'package:flutter_hbb/common/widgets/peers_view.dart';
@@ -186,7 +186,7 @@ class GroupModel {
               json['error']
                   .toString()
                   .contains('ambiguous column name: status')) {
-            throw translate('upgrade_rustdesk_server_pro_to_{1.1.10}_tip');
+            throw translate('upgrade_safedesk_server_pro_to_{1.1.10}_tip');
           } else {
             throw json['error'];
           }

@@ -1,4 +1,4 @@
-//! Dynamic loading wrapper for libxdo.
+﻿//! Dynamic loading wrapper for libxdo.
 //!
 //! Provides the same API as libxdo-sys but loads libxdo at runtime,
 //! allowing the program to run on systems without libxdo installed
@@ -103,7 +103,7 @@ struct XdoLib {
 
 impl XdoLib {
     fn load() -> Option<Self> {
-        // https://github.com/rustdesk/rustdesk/issues/13711
+        // https://github.com/safedesk/safedesk/issues/13711
         const LIB_NAMES: [&str; 3] = ["libxdo.so.4", "libxdo.so.3", "libxdo.so"];
 
         unsafe {

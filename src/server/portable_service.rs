@@ -1,4 +1,4 @@
-use crate::{
+﻿use crate::{
     ipc::{self, new_listener, Connection, Data, DataPortableService, IPC_TOKEN_LEN},
     platform::{
         set_path_permission, set_path_permission_for_portable_service_shmem_dir,
@@ -740,7 +740,7 @@ pub mod server {
                     return;
                 }
                 let mut timer =
-                    crate::rustdesk_interval(tokio::time::interval(Duration::from_secs(1)));
+                    crate::safedesk_interval(tokio::time::interval(Duration::from_secs(1)));
                 let mut nack = 0;
                 loop {
                     if *EXIT.lock().unwrap() {
@@ -1382,7 +1382,7 @@ pub mod client {
                                     tokio::spawn(async move {
                                         let mut stream = stream;
                                         let postfix = postfix.to_owned();
-                                        let mut timer = crate::rustdesk_interval(tokio::time::interval(Duration::from_secs(1)));
+                                        let mut timer = crate::safedesk_interval(tokio::time::interval(Duration::from_secs(1)));
                                         let mut nack = 0;
                                         let mut rx = rx_clone.lock().await;
                                         loop {

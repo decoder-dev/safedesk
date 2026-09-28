@@ -1,4 +1,4 @@
-use core_graphics;
+﻿use core_graphics;
 // TODO(dustin): use only the things i need
 
 use self::core_graphics::display::*;
@@ -626,7 +626,7 @@ impl Enigo {
 
     #[inline]
     fn map_key_board(&mut self, ch: char) -> CGKeyCode {
-        // no idea why below char not working with shift, https://github.com/rustdesk/rustdesk/issues/406#issuecomment-1145157327
+        // no idea why below char not working with shift, https://github.com/safedesk/safedesk/issues/406#issuecomment-1145157327
         // seems related to numpad char
         if ch == '-' || ch == '=' || ch == '.' || ch == '/' || (ch >= '0' && ch <= '9') {
             return self.map_key_board_en(ch);

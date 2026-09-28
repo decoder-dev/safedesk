@@ -1,4 +1,4 @@
-# Miscellaneous
+﻿# Miscellaneous
 *.class
 *.log
 *.pyc
@@ -53,4 +53,4 @@ lib/generated_bridge.freezed.dart
 flutter_export_environment.sh
 Flutter-Generated.xcconfig
 key.jks
-macos/rustdesk.xcodeproj/project.xcworkspace/
+macos/safedesk.xcodeproj/project.xcworkspace/

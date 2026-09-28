@@ -1,4 +1,4 @@
-use crate::ipc::{self, new_listener, Connection, Data, DataKeyboard, DataMouse};
+﻿use crate::ipc::{self, new_listener, Connection, Data, DataKeyboard, DataMouse};
 use enigo::{Key, KeyboardControllable, MouseButton, MouseControllable};
 use evdev::{
     uinput::{VirtualDevice, VirtualDeviceBuilder},
@@ -555,7 +555,7 @@ pub mod service {
         let mut miscs = AttributeSet::<evdev::MiscType>::new();
         miscs.insert(evdev::MiscType::MSC_SCAN);
         let keyboard = VirtualDeviceBuilder::new()?
-            .name("RustDesk UInput Keyboard")
+            .name("SafeDesk UInput Keyboard")
             .with_keys(&keys)?
             .with_leds(&leds)?
             .with_miscs(&miscs)?

@@ -1,4 +1,4 @@
-mod custom_server;
+﻿mod custom_server;
 use hbb_common::{ResultType, base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _}};
 use custom_server::*;
 
@@ -18,7 +18,7 @@ fn main() {
             api,
             relay,
         }) {
-            Ok(name) => println!("rustdesk-custom_serverd-{}.exe", name),
+            Ok(name) => println!("safedesk-custom_serverd-{}.exe", name),
             Err(e) => println!("{:?}", e),
         }
     }

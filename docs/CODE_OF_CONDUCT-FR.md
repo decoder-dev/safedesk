@@ -1,4 +1,4 @@
-
+﻿
 # Code de conduite des contributeurs
 
 ## Notre engagement
@@ -65,7 +65,7 @@ désigné lors d'un événement en ligne ou hors ligne.
 
 Les cas de comportements abusifs, harcelants ou autrement inacceptables peuvent
 être signalés aux responsables de la communauté chargés de l'application à
-[info@rustdesk.com](mailto:info@rustdesk.com).
+[info@safedesk.com](mailto:info@safedesk.com).
 Toutes les plaintes seront examinées et feront l'objet d'une enquête rapide et
 équitable.
 

@@ -1,4 +1,4 @@
-# clipboard
+﻿# clipboard
 
 Copy files and text through network.
 Main low-level logic from [FreeRDP](https://github.com/FreeRDP/FreeRDP).
@@ -139,10 +139,10 @@ the FUSE server will figure out the file system tree and rearrange its content.
 
   ```text
   UNIX
-  /usr/bin/rustdesk
+  /usr/bin/safedesk
   ->
   DOS
-  \usr\bin\rustdesk
+  \usr\bin\safedesk
   ```
 
 - To better fit for preserving permissions on unix-like platforms,

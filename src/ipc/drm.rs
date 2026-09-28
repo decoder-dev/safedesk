@@ -1,4 +1,4 @@
-// The DRM/KMS capture half of the `_drm` IPC channel: types, root-service producer, framing.
+﻿// The DRM/KMS capture half of the `_drm` IPC channel: types, root-service producer, framing.
 
 use super::ipc_auth::active_uid_cached;
 use super::*;
@@ -467,7 +467,7 @@ fn drm_wake_displays(reason: &str) -> bool {
     let mut keys = evdev::AttributeSet::<evdev::Key>::new();
     keys.insert(evdev::Key::BTN_LEFT);
     let built = evdev::uinput::VirtualDeviceBuilder::new()
-        .and_then(|b| b.name("RustDesk DRM display wake").with_relative_axes(&axes))
+        .and_then(|b| b.name("SafeDesk DRM display wake").with_relative_axes(&axes))
         .and_then(|b| b.with_keys(&keys))
         .and_then(|b| b.build());
     let mut dev = match built {

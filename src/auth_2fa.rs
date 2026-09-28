@@ -1,4 +1,4 @@
-use hbb_common::{
+﻿use hbb_common::{
     anyhow::anyhow,
     bail,
     config::Config,
@@ -14,7 +14,7 @@ lazy_static::lazy_static! {
     static ref CURRENT_2FA: Mutex<Option<(TOTPInfo, TOTP)>> = Mutex::new(None);
 }
 
-const ISSUER: &str = "RustDesk";
+const ISSUER: &str = "SafeDesk";
 const TAG_LOGIN: &str = "Connection";
 
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]

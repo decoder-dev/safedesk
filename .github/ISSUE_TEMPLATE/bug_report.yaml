@@ -1,4 +1,4 @@
-name: 🐞 Bug report
+﻿name: 🐞 Bug report
 description: Thanks for taking the time to fill out this bug report! Please fill the form in **English**
 labels: ["bug"]
 body:
@@ -35,8 +35,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: RustDesk Version(s) on local (controlling) side and remote (controlled) side
-      description: What RustDesk version(s) do you see this bug on? local (controlling) side -> remote (controlled) side.
+      label: SafeDesk Version(s) on local (controlling) side and remote (controlled) side
+      description: What SafeDesk version(s) do you see this bug on? local (controlling) side -> remote (controlled) side.
       placeholder: |
         1.1.9 -> 1.1.8
     validations:

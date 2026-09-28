@@ -1,4 +1,4 @@
-use super::{server::EVENT_PROXY, Cursor, CustomEvent, Ripple};
+﻿use super::{server::EVENT_PROXY, Cursor, CustomEvent, Ripple};
 use core_graphics::context::CGContextRef;
 use foreign_types::ForeignTypeRef;
 use hbb_common::{bail, log, ResultType};
@@ -82,7 +82,7 @@ fn create_windows(event_loop: &EventLoop<(String, CustomEvent)>) -> ResultType<V
         };
 
         let window_builder = WindowBuilder::new()
-            .with_title("RustDesk whiteboard")
+            .with_title("SafeDesk whiteboard")
             .with_transparent(true)
             .with_decorations(false)
             .with_position(monitor.position())

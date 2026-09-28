@@ -1,4 +1,4 @@
-use crate::{
+﻿use crate::{
     platform::unix::{
         filetype::file_list_id,
         local_file::{construct_file_list, LocalFile},
@@ -481,7 +481,7 @@ mod sig_test {
                 .map(|d| d.as_nanos())
                 .unwrap_or(0);
             let mut dir = std::env::temp_dir();
-            dir.push(format!("rustdesk_sig_test_{}_{}", tag, nanos));
+            dir.push(format!("safedesk_sig_test_{}_{}", tag, nanos));
             fs::create_dir_all(&dir).unwrap();
             TmpDir(dir)
         }

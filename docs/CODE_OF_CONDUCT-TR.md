@@ -1,4 +1,4 @@
-# Katkıda Bulunanların Davranış Kuralları
+﻿# Katkıda Bulunanların Davranış Kuralları
 
 ## Taahhüdümüz
 
@@ -36,7 +36,7 @@ Bu Davranış Kuralları, tüm topluluk alanlarında geçerlidir ve aynı zamand
 
 ## Uygulama
 
-Taciz edici, rahatsız edici veya başka türlü kabul edilemez davranış örnekleri, [info@rustdesk.com](mailto:info@rustdesk.com) adresindeki uygulama sorumlularına bildirilebilir. Tüm şikayetler hızlı ve adil bir şekilde incelenecek ve araştırılacaktır.
+Taciz edici, rahatsız edici veya başka türlü kabul edilemez davranış örnekleri, [info@safedesk.com](mailto:info@safedesk.com) adresindeki uygulama sorumlularına bildirilebilir. Tüm şikayetler hızlı ve adil bir şekilde incelenecek ve araştırılacaktır.
 
 Tüm topluluk liderleri, olayın raporlayıcısının gizliliğine ve güvenliğine saygı gösterme yükümlülüğündedir.
 

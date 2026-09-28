@@ -1,4 +1,4 @@
-part of 'terminal_mouse_handler.dart';
+﻿part of 'terminal_mouse_handler.dart';
 
 const _prepareTerminalClipboardCommand = 'prepare_terminal_clipboard';
 const _finishTerminalClipboardCommand = 'finish_terminal_clipboard';
@@ -9,7 +9,7 @@ extension _TerminalWebClipboardGesture on _TerminalMouseInteractionState {
     if (!kIsWeb) return;
     _cancelTerminalClipboardWrite();
     final terminal = widget.terminal;
-    if (terminal is! RustDeskTerminal || !terminal.isClipboardWriteAllowed) {
+    if (terminal is! SafeDeskTerminal || !terminal.isClipboardWriteAllowed) {
       return;
     }
     try {

@@ -1,4 +1,4 @@
-# RustDesk msi project
+﻿# SafeDesk msi project
 
 Use Visual Studio 2022 to compile this project.
 

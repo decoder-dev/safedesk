@@ -1,4 +1,4 @@
-// Runtime loader for libdrmtap.so (the DRM/KMS capture engine), dlopen'd so the binary carries no hard libdrm/libEGL/libGLESv2 dependency.
+﻿// Runtime loader for libdrmtap.so (the DRM/KMS capture engine), dlopen'd so the binary carries no hard libdrm/libEGL/libGLESv2 dependency.
 
 use hbb_common::{libloading::Library, log};
 use std::os::raw::{c_char, c_int, c_void};
@@ -251,8 +251,8 @@ fn abi_accepted(major: c_int, minor: c_int, patch: c_int) -> bool {
 
 impl DrmtapLib {
     fn load() -> Option<Self> {
-        // Absolute path FIRST: the deb bundles the .so privately under /usr/lib/rustdesk and does NOT register that dir with ld.so.
-        const INSTALLED: &str = "/usr/lib/rustdesk/libdrmtap.so.0";
+        // Absolute path FIRST: the deb bundles the .so privately under /usr/lib/safedesk and does NOT register that dir with ld.so.
+        const INSTALLED: &str = "/usr/lib/safedesk/libdrmtap.so.0";
         // Bare sonames exist so an unpackaged development build can load a locally built .so from
         // the normal ld.so search path. They are NOT offered when running as root: this is the one
         // place where which file happens to be on the load path decides what gets mapped into the
